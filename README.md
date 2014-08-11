@@ -2,6 +2,8 @@
 
 Automatically turns your Statamic Section fieldtypes into tabs.
 
+![Screen Shot](/statamic-section-tabs.png?raw=true "Statamic Section Tabs")
+
 Inspired by [addon-section-links](https://github.com/statamic/addon-section-links) by [Statamic](https://github.com/statamic) and [Statamic Field Tamer](https://github.com/pixelfear/Statamic-Field-Tamer) by [Jason Varga](https://github.com/pixelfear).
 
 ## Installation

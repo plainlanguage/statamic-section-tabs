@@ -8,12 +8,12 @@ $(document).ready(function() {
 	sections.each(function() {
 		var $this = $(this),
 			title = $this.children('label').html(),
-			slug = getSlug(title),
-			wrap = $this.nextUntil(sections).andSelf() // Group .input-section and other input sections until the next .input-section
+			slug  = getSlug(title),
+			wrap  = $this.nextUntil(sections).andSelf() // Group .input-section and other input sections until the next .input-section
 		;
 
 		// Attach ID
-		$(this).attr('id', slug);
+		$this.attr('id', slug);
 
 		// Append to ul.tabs
 		tabs.append('<a href="#' + slug +'">' + title + '</a>');
@@ -44,8 +44,8 @@ $(document).ready(function() {
 
 		goDoTabs: function(event) {
 			var $this = $(this),
-				clicked = $this.attr('href'),
-				clickedLink = clicked.substring(1, clicked.length),
+				clicked      = $this.attr('href'),
+				clickedLink  = clicked.substring(1, clicked.length),
 				inactiveTabs = $this.closest('.tabs-section').find('a')
 			;
 
