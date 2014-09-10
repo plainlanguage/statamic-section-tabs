@@ -18,6 +18,9 @@ $(document).ready(function() {
 		// Append to ul.tabs
 		tabs.append('<a href="#' + slug +'">' + title + '</a>');
 
+		// Move the last one to the front. Because.
+		tabs.find('a').last().prependTo(tabs);
+
 		// Wrap .block-wrap around section group
 		wrap.wrapAll('<div class="tabs block-wrap" id="block-wrap-' + slug + '" />')
 	});
@@ -29,7 +32,7 @@ $(document).ready(function() {
 
 		$('.block-wrap').first().before(tabs); // Load tabs before first block-wrap group
 		firstTab.addClass('active'); // Make the first class active
-		$('.tabs.block-wrap').not(':first').addClass('is-hidden'); // Add .is-hidden to all except first block-wrap block
+		$('.tabs.block-wrap').not(':last').addClass('is-hidden'); // Add .is-hidden to all except last block-wrap block
 	}
 
 	// Tab Switching for fun and profit. Well, not profit.
