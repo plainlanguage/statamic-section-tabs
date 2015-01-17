@@ -3,7 +3,8 @@
 }
 
 .tabs.block-wrap.is-hidden {
-	max-height: 0;
+	display: none;
+	height: 0;
 	overflow: hidden;
 	padding: 0;
 }
